@@ -2,8 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fritura Urbana</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
     * {
       box-sizing: border-box;
@@ -18,12 +20,13 @@
       align-items: center;
       background: linear-gradient(-10deg, #F39104, #B91918);
       color: #333;
+      padding: 16px;
     }
 
     .container {
       width: 100%;
       max-width: 360px;
-      background: rgba(255,255,255,.8);
+      background: rgba(255, 255, 255, 0.8);
       border-radius: 16px;
       padding: 32px 24px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -32,6 +35,8 @@
 
     .logo {
       width: 120px;
+      max-width: 100%;
+      height: auto;
       margin: 0 auto 20px;
       display: block;
     }
@@ -56,8 +61,9 @@
       margin-bottom: 14px;
       transition: background 0.2s ease, transform 0.2s ease;
       border: 1px solid #F1F1F1;
+      font-size: 1rem;
     }
-    
+
     .social-link:hover {
       background: #F1F1F1;
       border: 1px solid #B1B1B1;
@@ -67,8 +73,46 @@
     .social-link i {
       font-size: 1.2rem;
     }
+
+    /* Tablets */
+    @media (min-width: 600px) {
+      .container {
+        max-width: 420px;
+        padding: 40px 32px;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      .social-link {
+        font-size: 1.05rem;
+        padding: 16px;
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 1024px) {
+      body {
+        padding: 32px;
+      }
+
+      .container {
+        max-width: 480px;
+        padding: 48px 40px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .social-link i {
+        font-size: 1.3rem;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <img src="logo.png" alt="Logo" class="logo">
